@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devi Site - HTML</title>
+       <link rel="icon" type="image/x-icon" href="Imagens/icon.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            margin-top: -5px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #adc2bdcb;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #030303;
+            
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #18a0c1;
+            text-align: center;
+            margin-bottom: 10px;
+            text-decoration: underline;
+        }
+
+        p {
+            margin: 10px 0;
+            text-align: justify;
+        }
+
+        pre {
+            background-color: #37aecc71;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        ul,
+        ol {
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        main {
+            display: grid;
+            grid-template-areas:
+                "head head head"
+                "main main main"
+                "foot foot foot";
+            grid-template-columns: 1fr 2fr 1fr;
+            padding: 10px;
+            gap: 10px;
+            margin-left: -9.9px;
+            margin-right: -9.9px;
+        }
+
+        header {
+            grid-area: head;
+            width: 100%;
+            background-color: #cc3737;
+            background-image: url(Imagens/Banner\ \ html.png);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header h1 {
+            font-variant: small-caps;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 900;
+            font-size: 7em;
+            text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
+            background-image: url('Imagens/Banner.png');
+            background-position: center center;
+            background-size: cover;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: animate 5s linear infinite;
+        }
+
+        @keyframes animate {
+            to {
+                background-position-x: 400px;
+            }
+        }
+
+        article {
+            grid-area: main;
+
+            margin: 6px;
+        }
+
+        footer {
+           grid-area: foot;
+            display: flex;
+
+            background-image: url(Imagens/LOgo\ 2.png);
+            background-position: center center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>O que é HTML?</h1>
+        </header>
+        <article>
+            <p>
+                <strong>HTML (HyperText Markup Language)</strong> é a linguagem de marcação padrão para criar páginas
+                web. Ela estrutura o conteúdo exibido nos navegadores e pode ser complementada por CSS e JavaScript para
+                criar páginas modernas e interativas.
+            </p>
+
+            <h1 style="font-size: 3em;">História da Internet</h1><br>
+            <h3>A Internet: Origem e Evolução</h3><br>
+            <p>
+                A internet surgiu na década de 1960 com a ARPANET, um projeto do Departamento de Defesa dos EUA. O
+                objetivo era criar uma rede de comunicação segura e resiliente. Com o tempo, outras redes foram
+                conectadas, formando a internet global que conhecemos hoje, essencial para comunicação, acesso à
+                informação e serviços online.
+            </p><br>
+
+            <h2>Estrutura Básica do HTML</h2><br>
+            <p>
+                Um documento HTML é composto por elementos representados por tags. Cada tag tem uma função específica e
+                pode conter atributos. A estrutura básica inclui:
+            </p><br>
+            <ul>
+                <li><strong>&lt;!DOCTYPE html&gt;:</strong> Declara o tipo de documento.</li>
+                <li><strong>&lt;html&gt;:</strong> Tag raiz do documento.</li>
+                <li><strong>&lt;head&gt;:</strong> Metadados, título, links e scripts.</li>
+                <li><strong>&lt;body&gt;:</strong> Conteúdo visível da página.</li>
+            </ul><br><br>
+            <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-br"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Exemplo HTML&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Título da Página&lt;/h1&gt;
+    &lt;p&gt;Conteúdo da página.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre><br><br>
+            <div style="display: flex; justify-content: center;">
+                <img src="imagens/Estrutura.png" alt="Estrutura do HTML" width="500">
+            </div><br><br>
+
+            <h2>Principais Elementos HTML</h2>
+            <ul>
+                <li><strong>&lt;h1&gt; a &lt;h6&gt;:</strong> Cabeçalhos de diferentes níveis.</li>
+                <li><strong>&lt;p&gt;:</strong> Parágrafo de texto.</li>
+                <li><strong>&lt;a&gt;:</strong> Link para outra página ou recurso (<code>href</code>).</li>
+                <li><strong>&lt;img&gt;:</strong> Imagem (<code>src</code> e <code>alt</code>).</li>
+                <li><strong>&lt;ul&gt; e &lt;ol&gt;:</strong> Listas não ordenadas e ordenadas.</li>
+                <li><strong>&lt;li&gt;:</strong> Item de lista.</li>
+                <li><strong>&lt;div&gt;:</strong> Contêiner genérico para agrupar elementos.</li>
+                <li><strong>&lt;span&gt;:</strong> Contêiner em linha para estilizar partes do texto.</li>
+                <li><strong>&lt;form&gt;:</strong> Formulário para entrada de dados.</li>
+                <li><strong>&lt;table&gt;:</strong> Tabela para organizar dados.</li>
+            </ul><br><br>
+            <div style="display: flex; justify-content: center;">
+                <img src="imagens/Elementos.png" alt="Elementos do HTML" width="500">
+            </div><br>
+
+            <h2>Links e Navegação</h2><br>
+            <p>
+                Os links permitem a navegação entre páginas e recursos. Exemplo:
+            </p>
+            <pre><code>
+&lt;a href="https://www.exemplo.com"&gt;Visite nosso site&lt;/a&gt;
+            </code></pre>
+            <p>
+                Para navegação interna:
+            </p>
+            <pre><code>
+&lt;a href="pagina2.html"&gt;Ir para a Página 2&lt;/a&gt;
+            </code></pre>
+            <nav>
+                <ul>
+                    <li><a href="html.html">HTML</a></li>
+                    <li><a href="css.html">CSS</a></li>
+                    <li><a href="javascript.html">JavaScript</a></li>
+                </ul>
+            </nav>
+            <div style="display: flex; justify-content: center;">
+                <img src="imagens/Links.png" alt="Links e Navegação" width="500">
+            </div><br>
+            <h2>Inputs e Formulários</h2><br>
+            <p>
+                Inputs permitem a entrada de dados pelo usuário. Exemplos:
+            </p>
+            <ul>
+                <li><strong>Texto:</strong> <code>&lt;input type="text"&gt;</code></li>
+                <li><strong>Senha:</strong> <code>&lt;input type="password"&gt;</code></li>
+                <li><strong>Email:</strong> <code>&lt;input type="email"&gt;</code></li>
+                <li><strong>Número:</strong> <code>&lt;input type="number"&gt;</code></li>
+                <li><strong>Checkbox:</strong> <code>&lt;input type="checkbox"&gt;</code></li>
+                <li><strong>Radio:</strong> <code>&lt;input type="radio"&gt;</code></li>
+                <li><strong>Submit:</strong> <code>&lt;input type="submit"&gt;</code></li>
+                <li><strong>Reset:</strong> <code>&lt;input type="reset"&gt;</code></li>
+                <li><strong>Textarea:</strong> <code>&lt;textarea&gt;</code></li>
+            </ul><br>
+            <pre><code><br>
+&lt;form action="processar.php" method="post"&gt;
+    &lt;label for="nome"&gt;Nome:&lt;/label&gt;
+    &lt;input type="text" id="nome" name="nome" required&gt;
+    &lt;label for="email"&gt;E-mail:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;
+    &lt;input type="submit" value="Enviar"&gt;
+&lt;/form&gt;
+            </code></pre><br><br>
+            <div style="display: flex; justify-content: center;">
+                <img src="imagens/Inputs.jpeg" alt="Inputs" width="500">
+            </div>
+            <br>
+            <h2>Elementos Semânticos</h2><br>
+            <p>
+                Elementos semânticos ajudam a estruturar o conteúdo de forma lógica e acessível:
+            </p><br>
+            <ul>
+                <li><strong>&lt;header&gt;:</strong> Cabeçalho da página ou seção.</li>
+                <li><strong>&lt;nav&gt;:</strong> Navegação.</li>
+                <li><strong>&lt;main&gt;:</strong> Conteúdo principal.</li>
+                <li><strong>&lt;article&gt;:</strong> Conteúdo independente.</li>
+                <li><strong>&lt;section&gt;:</strong> Seção de conteúdo.</li>
+                <li><strong>&lt;aside&gt;:</strong> Conteúdo complementar.</li>
+                <li><strong>&lt;footer&gt;:</strong> Rodapé.</li>
+                <li><strong>&lt;figure&gt; e &lt;figcaption&gt;:</strong> Imagem e legenda.</li>
+                <li><strong>&lt;time&gt;:</strong> Data ou hora.</li>
+            </ul><br>
+
+            <div style="display: flex; justify-content: center;">
+            <img src="Imagens/Elementos Semânticos.jpeg" alt="Elementos Semânticos" width="500">
+            </div><br>
+
+            <h2>Elementos de Bloco e Inline</h2><br>
+            <p>
+                <strong>Elementos de bloco</strong> ocupam toda a largura disponível e começam em nova linha (ex:
+                <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;h1&gt;</code>).<br>
+                <strong>Elementos inline</strong> ocupam apenas o espaço necessário (ex: <code>&lt;span&gt;</code>,
+                <code>&lt;a&gt;</code>, <code>&lt;img&gt;</code>).
+            </p><br>
+            <div style="display: flex; justify-content: center;">
+            <img src="imagens/Elementos de Bloco e Inline.png" alt="Elementos de Bloco e Inline" width="500">
+            </div><br>
+
+            <h2>Tabelas e Formulários</h2><br>
+            <p>
+                Tabelas organizam dados em linhas e colunas:
+            </p><br>
+            <pre><code>
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Nome&lt;/th&gt;
+        &lt;th&gt;Idade&lt;/th&gt;
+        &lt;th&gt;Cidade&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;João&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+        &lt;td&gt;São Paulo&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+            </code></pre><br>
+             <div style="display: flex; justify-content: center;">
+            <img src="imagens/Tabelas e Formulários.png" alt="Tabelas e Formulários" width="500">
+</div><br>
+            <h2>Listas</h2>
+            <p>
+                <strong>Listas não ordenadas (&lt;ul&gt;):</strong>
+            </p>
+            <pre><code>
+&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+            </code></pre>
+            <p>
+                <strong>Listas ordenadas (&lt;ol&gt;):</strong>
+            </p>
+            <pre><code>
+&lt;ol&gt;
+    &lt;li&gt;Primeiro Item&lt;/li&gt;
+    &lt;li&gt;Segundo Item&lt;/li&gt;
+&lt;/ol&gt;
+            </code></pre><br>
+            <div style="display: flex; justify-content: center;">
+                <img src="imagens/Listas.png" alt="Listas" width="500">
+            </div><br>
+
+            <h2>Mídias</h2>
+            <br>
+            <p>
+                HTML permite incorporar imagens, vídeos e áudios:
+            </p>
+            <pre><code>
+&lt;img src="imagem.jpg" alt="Descrição"&gt;
+&lt;video src="video.mp4" controls&gt;Seu navegador não suporta vídeo.&lt;/video&gt;
+&lt;audio src="audio.mp3" controls&gt;Seu navegador não suporta áudio.&lt;/audio&gt;
+            </code></pre><br>
+            <div style="display: flex; justify-content: center;">
+                <img src="imagens/Mídias.png" alt="Mídias" width="500">
+            </div><br>
+
+            <h2>Responsividade</h2><br>
+            <p>
+                Para tornar o site responsivo, use a meta tag viewport e imagens flexíveis:
+            </p>
+            <pre><code><br>
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;img src="imagem-pequena.jpg" 
+     srcset="imagem-media.jpg 600w, imagem-grande.jpg 1200w" 
+     sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+     alt="Descrição da imagem"&gt;
+            </code></pre><br>
+
+            <h1>Conclusão</h1>
+            <p>
+                HTML é a base da web. Compreender suas tags, atributos e estrutura é fundamental para criar páginas
+                eficientes e acessíveis. Pratique e explore para dominar o desenvolvimento web!
+            </p>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2024 Djonatha Desenvolvimento Web. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-top: -5px;
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #adc2bdcb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #030303;
+
+
+}
+
+h1,
+h2,
+h3 {
+    color: #18a0c1;
+    text-align: center;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+p {
+    margin: 10px;
+    text-align: justify;
+}
+
+a {
+    color: #cc3737;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+pre {
+    background-color: #37aecc71;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+li {
+    margin: 5px 0;
+}
+
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.slider img {
+    width: 400px;
+    /* ajuste conforme o tamanho desejado */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.slider img:hover {
+    transform: scale(1.1);
+    /* efeito ao passar o mouse */
+}
+
+main {
+    display: grid;
+    grid-template-areas: "head head head" "main main main" "foot foot foot";
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 10px;
+    gap: 10px;
+
+}
+
+header {
+    grid-area: head;
+    margin: 0;
+    padding: 0;
+    width: 100%;  
+    font-family: Arial, Helvetica, sans-serif;
+    /* Estilos para o fundo do HEADER */
+    background-color: #cc3737;
+    /* Cor de fundo sólida (opcional) */
+    background-image: url('Imagens/Banner\ \ html.png');
+    /* Sua imagem de fundo para o HEADER */
+    background-position: center center;
+    background-size: cover;
+    /* Altura mínima para mostrar a imagem */
+    min-height: 400px;
+    /* Para centralizar o texto dentro do header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header h1 {
+
+    background-color: #cc3737;
+    font-variant: small-caps;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900em;
+    font-size: 7em;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
+    background: url(Imagens/Banner.png);
+    background-position: center center;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+    to {
+        background-position-x: 400px;
+    }
+
+}
+
+
+
+article {
+    grid-area: main;
+
+    margin: 6px;
+}
+
+footer {
+
+    grid-area: foot;
+    display: flex;
+
+    background-image: url(Imagens/LOgo\ 2.png);
+    background-position: center center;
+    color: white;
+
+
+
+
+}

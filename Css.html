@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS - Cascading Style Sheets</title>
+     <link rel="icon" type="image/x-icon" href="Imagens/icon.png">
+     </head>
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      margin-top: -5px;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background-color: #adc2bdcb;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #030303;
+    }
+
+    h1, 
+    h2, h3, h4 {
+      color: #18a0c1;
+      text-align: center;
+      margin-bottom: 10px;
+      text-decoration: underline;
+    }
+
+    p {
+      margin: 10px 0;
+      text-align: justify;
+    }
+
+    pre {
+      background-color: #37aecc71;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    main {
+      display: grid;
+      grid-template-areas:
+        "head head head"
+        "main main main"
+        "foot foot foot";
+      grid-template-columns: 1fr 2fr 1fr;
+      padding: 10px;
+      gap: 10px;
+      margin-left: -9.9px;
+      margin-right: -9.9px;
+    }
+
+    header {
+      grid-area: head;
+      width: 100%;
+      background-color: #cc3737;
+      background-image: url(Imagens/Banner\ \ html.png);
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      min-height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header h1 {
+      font-variant: small-caps;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 900;
+      font-size: 7em;
+      text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
+      background-image: url('Imagens/Banner.png');
+      background-position: center center;
+      background-size: cover;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: animate 5s linear infinite;
+    }
+
+    @keyframes animate {
+      to {
+        background-position-x: 400px;
+      }
+    }
+
+    article {
+      grid-area: main;
+
+      margin: 6px;
+    }
+
+    footer {
+    grid-area: foot;
+            display: flex;
+
+            background-image: url(Imagens/LOgo\ 2.png);
+            background-position: center center;
+            color: white;
+
+     
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>CSS - Cascading Style Sheets</h1>
+    </header>
+
+    <article>
+      <p>CSS (Cascading Style Sheets) é uma linguagem de estilo usada para descrever a apresentação de documentos HTML. Com o CSS, você pode controlar o layout, as cores, as fontes e outros aspectos visuais das páginas web.</p>
+
+      <h2 style="font-size: 3em;">Conceitos Básicos do CSS</h2><br>
+      <ul>
+        <li><strong>Seletores:</strong> Permitem selecionar elementos HTML para aplicar estilos.</li>
+        <li><strong>Propriedades:</strong> Definem os aspectos visuais que você deseja alterar.</li>
+        <li><strong>Valores:</strong> Especificam os valores das propriedades.</li>
+      </ul>
+
+      <h2>Como Incluir CSS em um Documento HTML</h2><br>
+      <p>Existem três maneiras principais de incluir CSS em um documento HTML:</p>
+      <ol>
+        <li><strong>CSS Externo:</strong> Usando a tag &lt;link&gt; no &lt;head&gt; do documento.</li>
+        <li><strong>CSS Interno:</strong> Usando a tag &lt;style&gt; dentro do &lt;head&gt;.</li>
+        <li><strong>CSS Inline:</strong> Usando o atributo "style" diretamente em um elemento HTML.</li>
+      </ol><br>
+
+      <h2>História do CSS</h2><br>
+      <p>CSS foi desenvolvido por Håkon Wium Lie em 1994 enquanto trabalhava no CERN. A primeira especificação oficial, CSS1, foi publicada em 1996 pelo W3C.</p><br>
+
+      <h3>Seletores</h3><br>
+      <ul>
+        <li><strong>Tipo:</strong> <code>p { color: blue; }</code></li>
+        <li><strong>Classe:</strong> <code>.highlight { background-color: yellow; }</code></li>
+        <li><strong>ID:</strong> <code>#header { font-size: 24px; }</code></li>
+      </ul><br>
+
+      <h3>Propriedades Comuns</h3><br>
+
+      <ul>
+        <li><strong>color:</strong> <code>color: red;</code></li>
+        <li><strong>font-size:</strong> <code>font-size: 16px;</code></li>
+        <li><strong>background-color:</strong> <code>background-color: lightgray;</code></li>
+        <li><strong>margin:</strong> <code>margin: 10px;</code></li>
+        <li><strong>padding:</strong> <code>padding: 5px;</code></li>
+        <li><strong>border:</strong> <code>border: 1px solid black;</code></li>
+      </ul><br>
+
+      <h3>Exemplo de CSS Externo</h3><br>
+      <pre><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre><br>
+
+      <h3>Exemplo de CSS Interno</h3><br>
+      <pre><code>&lt;style&gt;
+  body {
+    font-family: Arial;
+    background-color: #f0f0f0;
+  }
+  h1 {
+    color: blue;
+  }
+  p {
+    color: green;
+  }
+&lt;/style&gt;</code></pre><br>
+
+      <h3>Exemplo de CSS Inline</h3><br>
+      <pre><code>&lt;h1 style="color: blue;"&gt;Olá, Mundo!&lt;/h1&gt;</code></pre><br>
+
+      <h4>Conclusão</h4><br>
+      <p>O CSS é uma ferramenta poderosa para estilizar páginas web. Compreender os conceitos básicos é essencial para qualquer desenvolvedor web.</p>
+    </article>
+
+    <footer>
+      <p>&copy; 2024 Djonatha Desenvolvimento Web. Todos os direitos reservados.</p>
+    </footer>
+  </main>
+</body>
+</html>
